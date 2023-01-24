@@ -8,7 +8,7 @@ class Source:
         self.name = name
         self.type = type
     
-    def getTab(lengthTab):
-        return 
+    def getRandomSequence(lengthTab):
+        pass
     
 
