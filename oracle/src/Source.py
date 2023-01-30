@@ -1,4 +1,3 @@
-import Process
 # cette classe retourne un tableau de n nombre random.
 # le nombre n est defini par les besoins de son predicteur respectif
 
@@ -9,6 +8,7 @@ class Source:
         self.type = type
     
     def getRandomSequence(lengthTab):
+
         pass
     
 
