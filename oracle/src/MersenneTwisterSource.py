@@ -1,9 +1,10 @@
-import Source
+from Source import Source
 import random
+
 class MersenneTwisterSource(Source):
 
     def __init__(self):
-        super()
+        super("Mersenne Twister", "tab")
 
     def getRandomSequence(lengthTab):
         
@@ -11,7 +12,7 @@ class MersenneTwisterSource(Source):
         mersenne_twister = random.Random()
 
         random_numbers = [mersenne_twister.random() for _ in range(624)]
-
+        
 
         
 
