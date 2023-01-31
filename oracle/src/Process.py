@@ -1,5 +1,6 @@
 # - source
 from MersenneTwisterSource import MersenneTwisterSource
+from MersenneTwisterOracle import MersenneTwisterOracle
 from BlumBlumShubSource import BlumBlumShubSource
 from HumanSource import HumanSource
 from LCGSource import LCGSource
@@ -11,12 +12,16 @@ from RandomOrgSource import RandomOrgSource
 # - autre
 
 def process():
-    listeDeSources = [MersenneTwisterSource()]
+    listeDeSources = [MersenneTwisterSource(), RandomOrgSource()]
+
+
     
 
     resultatsDesSources = {}
     for source in listeDeSources:
-        resultatsDesSources[source.getName()] = source.getRandomSequence(624)
+        source.generateNumberSequence(624)
+        resultatsDesSources[source.getName()] = source.getNumberSequence()
+
     print(resultatsDesSources)
 
 

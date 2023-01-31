@@ -5,5 +5,5 @@ class HumanSource(Source):
     def __init__(self):
         super().__init__("Human", "tab")
 
-    def getRandomSequence(self, lengthTab):
+    def getNumberSequence(self, lengthTab):
         return

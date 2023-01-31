@@ -5,5 +5,5 @@ class LCGSource(Source):
     def __init__(self):
         super().__init__("LCG", "tab")
 
-    def getRandomSequence(self, lengthTab):
+    def getNumberSequence(self, lengthTab):
         return

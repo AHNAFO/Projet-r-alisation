@@ -13,8 +13,19 @@ class Source(object):
     def getType(self):
         return self.type
 
-    def getRandomSequence(self, lengthTab):
+    def setNumberSequence(self, numberSequence):
+        self.numberSequence = numberSequence
 
+    def setNextNumber(self, nextNumber):
+        self.nextNumber = nextNumber
+
+    def getNumberSequence(self):
+        return self.numberSequence
+
+    def getNextNumber(self):
+        return self.nextNumber
+
+    def generateNumberSequence(self, lengthTab):
         pass
     
 
