@@ -13,7 +13,7 @@ class Source(object):
     def getType(self):
         return self.type
 
-    def getRandomSequence(lengthTab):
+    def getRandomSequence(self, lengthTab):
 
         pass
     

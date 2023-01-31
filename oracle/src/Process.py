@@ -2,13 +2,13 @@ from MersenneTwisterSource import MersenneTwisterSource
 
 
 def process():
-    #listeDeSources = [MersenneTwisterSource()]
-    vara = MersenneTwisterSource()
-    print(vara.getName())
+    listeDeSources = [MersenneTwisterSource()]
+    
 
     resultatsDesSources = {}
-    #for source in listeDeSources:
-    #    resultatsDesSources[source().getName()] = source.getRandomSequence(624)
+    for source in listeDeSources:
+        resultatsDesSources[source.getName()] = source.getRandomSequence(624)
+    print(resultatsDesSources)
 
 
 if __name__ == "__main__":

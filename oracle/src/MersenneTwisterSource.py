@@ -4,14 +4,13 @@ import random
 class MersenneTwisterSource(Source):
 
     def __init__(self):
-        super("Mersenne Twister", "tab")
+        super().__init__("Mersenne Twister", "tab")
 
-    def getRandomSequence(lengthTab):
+    def getRandomSequence(self, lengthTab):
         
         random.seed(42)
         mersenne_twister = random.Random()
-
-        random_numbers = [mersenne_twister.random() for _ in range(624)]
+        random_numbers = [mersenne_twister.random() for _ in range(lengthTab)]
         
 
         
