@@ -1,5 +1,14 @@
+# - source
 from MersenneTwisterSource import MersenneTwisterSource
+from BlumBlumShubSource import BlumBlumShubSource
+from HumanSource import HumanSource
+from LCGSource import LCGSource
+from LFSRSource import LFSRSource
+from RandomOrgSource import RandomOrgSource
 
+# - oracle
+
+# - autre
 
 def process():
     listeDeSources = [MersenneTwisterSource()]
