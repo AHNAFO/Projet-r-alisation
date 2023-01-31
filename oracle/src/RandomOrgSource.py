@@ -1,4 +1,5 @@
 from Source import Source
+import RandomOrgAPI as ROA
 
 class RandomOrgSource(Source):
 
@@ -6,4 +7,5 @@ class RandomOrgSource(Source):
         super().__init__("Random Org", "tab")
 
     def getRandomSequence(self, lengthTab):
-        return
+
+        return ROA.getListRandomOrg(lengthTab)
