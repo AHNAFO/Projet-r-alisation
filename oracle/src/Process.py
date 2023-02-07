@@ -1,7 +1,6 @@
 # - source
 from MersenneTwisterSource import MersenneTwisterSource
 from MersenneTwisterOracle import MersenneTwisterOracle
-from BlumBlumShubSource import BlumBlumShubSource
 from HumanSource import HumanSource
 from LCGSource import LCGSource
 from LFSRSource import LFSRSource
@@ -13,8 +12,6 @@ from RandomOrgSource import RandomOrgSource
 
 def process():
     listeDeSources = [MersenneTwisterSource(), RandomOrgSource()]
-
-
     
 
     resultatsDesSources = {}
