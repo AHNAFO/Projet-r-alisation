@@ -1,4 +1,9 @@
+from Predictor import Predictor
 
-class RandomOrgOracle():
 
-    def __init__():
+class RandomOrgOracle(Predictor):
+
+    def __init__(self):
+        super().__init__("RandomOrg", "tab")
+
+    def 

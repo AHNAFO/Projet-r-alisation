@@ -1,6 +1,10 @@
 from Predictor import Predictor
 
 class MersenneTwisterOracle(Predictor):
+
+    def __init__(self):
+        super().__init__("MersenneTwister", "tab")
+
     def predictNextNumber(self):
         randCrack = RandCrack()
 
