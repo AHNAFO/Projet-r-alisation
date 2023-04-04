@@ -17,7 +17,7 @@ def process():
 
     resultatsDesSources = {}
     for source in listeDeSources:
-        source.generateNumberSequence(6)
+        source.generateNumberSequence(100)
         resultatsDesSources[source.getName()] = source.getNumberSequence()
 
     print(resultatsDesSources)
