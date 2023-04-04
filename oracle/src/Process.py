@@ -12,15 +12,16 @@ from  RandomOrgOracle import RandomOrgOracle
 # - autre
 
 def process():
-    listeDeSources = [MersenneTwisterSource(), RandomOrgDecimalSource(), RandomOrgBinaireSource()]
+    listeDeSources = [RandomOrgDecimalSource()]
     
 
     resultatsDesSources = {}
     for source in listeDeSources:
-        source.generateNumberSequence()
+        source.generateNumberSequence(6)
         resultatsDesSources[source.getName()] = source.getNumberSequence()
 
     print(resultatsDesSources)
+
 
 
 if __name__ == "__main__":
