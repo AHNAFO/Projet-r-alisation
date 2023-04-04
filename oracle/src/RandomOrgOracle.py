@@ -19,8 +19,9 @@ class RandomOrgOracle(Predictor):
 
     def predictNextNumber(self):
 
-        data = [5, 6, 4, 9, 5, 8, 0, 8, 10, 5, 1, 8, 4, 8, 0, 5, 8, 10, 10, 10, 8, 2, 3, 5, 10, 8, 1, 2, 6, 7, 5, 5, 6, 1, 5, 2, 4, 8, 5, 0, 8, 9, 3, 5, 2, 5, 9, 6, 5, 1, 6, 2, 4, 8, 8, 0, 2, 1, 8, 10, 6, 2, 1, 2, 0, 0, 1, 1, 9, 1, 7, 7, 6, 2, 9, 6, 3, 0, 8, 3, 5, 0, 1, 10, 5, 1, 6, 9, 9, 7, 1, 7, 5, 3]
-        # Longueur de la fenêtre de prédiction
+        data = self.getNumberSequence()
+        
+         # Longueur de la fenêtre de prédiction
         window_size = 5
 
         # Valeurs précédentes à utiliser pour la prédiction
