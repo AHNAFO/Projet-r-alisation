@@ -23,5 +23,20 @@ def process():
     print(resultatsDesSources)
 
 
+def testMT():
+    source = MersenneTwisterSource()
+    oracle = MersenneTwisterOracle()
+
+    
+    source.generateNumberSequence(626)
+
+    oracle.setNumberSequence(source.getNumberSequence())
+    oracle.predictNextNumber()
+
+    print(source.getNextNumber(), '=', oracle.getNextNumberPredicted(), ':',
+        f'{source.getNextNumber() == oracle.getNextNumberPredicted() }')
+
+
 if __name__ == "__main__":
-    process() 
+    # process() 
+    testMT()

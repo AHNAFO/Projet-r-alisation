@@ -6,17 +6,11 @@ class Predictor(object):
     def setNumberSequence(self, numberSequence):
         self.numberSequence = numberSequence
 
-    def setNextNumber(self, nextNumber):
-        self.nextNumber = nextNumber
-
     def setNextNumberPredicted(self, nextNumberPredicted):
         self.nextNumberPredicted = nextNumberPredicted
 
     def getNumberSequence(self):
         return self.numberSequence
-
-    def getNextNumber(self):
-        return self.nextNumber
 
     def getNextNumberPredicted(self):
         return self.nextNumberPredicted
