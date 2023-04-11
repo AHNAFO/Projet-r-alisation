@@ -27,5 +27,3 @@ class Source(object):
 
     def generateNumberSequence(self, lengthTab):
         pass
-    
-

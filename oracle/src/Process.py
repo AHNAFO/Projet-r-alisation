@@ -12,17 +12,31 @@ from  RandomOrgOracle import RandomOrgOracle
 # - autre
 
 def process():
-    listeDeSources = [RandomOrgDecimalSource()]
+    listeDeSources = [LCGSource()]
     
 
     resultatsDesSources = {}
     for source in listeDeSources:
-        source.generateNumberSequence(100)
+        source.generateNumberSequence(101)
         resultatsDesSources[source.getName()] = source.getNumberSequence()
 
     print(resultatsDesSources)
 
 
+def testMT():
+    source = MersenneTwisterSource()
+    oracle = MersenneTwisterOracle()
+
+    
+    source.generateNumberSequence(626)
+
+    oracle.setNumberSequence(source.getNumberSequence())
+    oracle.predictNextNumber()
+
+    print(source.getNextNumber(), '=', oracle.getNextNumberPredicted(), ':',
+        f'{source.getNextNumber() == oracle.getNextNumberPredicted() }')
+
 
 if __name__ == "__main__":
-    process() 
+    # process() 
+    testMT()

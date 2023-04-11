@@ -6,8 +6,6 @@ import numpy as np
 cette methode utilise KNN,, c'est à dire les plus proches voisins.
 Les valeurs etant réélement aléatoire, elles ne peuvent être prédictible.
 
-
-
 c'est pour ça que ça ne fonctionne pas.
 
 '''
@@ -53,5 +51,3 @@ class RandomOrgOracle(Predictor):
         # Prendre les k plus proches voisins et calculer la moyenne de leurs sorties
         output = np.mean(y[idx[:k]])
         return output
-RO = RandomOrgOracle()
-print(RO.predictNextNumber())

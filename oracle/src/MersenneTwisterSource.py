@@ -12,7 +12,8 @@ class MersenneTwisterSource(Source):
 
         # python utilise Mersenne twister dans son module Random
         mersenne_twister = random.Random()
-        random_numbers = [mersenne_twister.getrandbits(32) for _ in range(lengthTab)]
+        random_numbers = [mersenne_twister.getrandbits(32) for _ in range(lengthTab - 1)]
         
         self.setNumberSequence(random_numbers)
+        self.setNextNumber(mersenne_twister.getrandbits(32))
     
