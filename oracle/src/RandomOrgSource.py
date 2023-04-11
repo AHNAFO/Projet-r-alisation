@@ -10,7 +10,7 @@ class RandomOrgDecimalSource(Source):
         super().__init__("RandomDecimalOrg", "tab")
 
     def generateNumberSequence(self, lengthTab):
-        self.setNumberSequence(getListRandomOrg(lengthTab, 10, 100))
+        self.setNumberSequence(getListRandomOrg(lengthTab, 10, 10))
 
 
 class RandomOrgBinaireSource(Source):
