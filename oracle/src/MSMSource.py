@@ -4,15 +4,20 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import time
 from Source import Source
+import platform
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+import random
 
-class LCGSource(Source):
+
+class MSMSource(Source):
 
     def __init__(self):
-        super().__init__("MSQ", "tab")
+        super().__init__("MSM", "tab")
 
-    def getNumberSequence(self, lengthTab):
-        # set up the webdriver
-        driver = webdriver.Chrome('/home/w116511/Downloads/chromedriver')
+    def generateNumberSequence(self, lengthTab):
+        driver = webdriver.Chrome(ChromeDriverManager().install())
+            
         # navigate to the website
         driver.get('https://sadale.net/27/online-middle-square-method-generator')
         element = WebDriverWait(driver, 10).until(
@@ -30,8 +35,8 @@ class LCGSource(Source):
         seed_input.clear()
         num_count.clear()
         digits_count.clear()
-        seed_input.send_keys("5484")
-        num_count.send_keys("10")
+        seed_input.send_keys(random.randint(1000, 9999))
+        num_count.send_keys(str(lengthTab))
         digits_count.send_keys("4")
         submit_btn.click()
 
@@ -46,7 +51,9 @@ class LCGSource(Source):
         l = output_text.split(', ')
         numbers = [int(st) for st in l]
         print(numbers)
+        self.setNumberSequence(numbers)
+        
         # close the webdriver
         driver.quit()
-
-        return
+        return self.getNumberSequence()
+    
