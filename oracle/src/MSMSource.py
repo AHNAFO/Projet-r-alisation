@@ -16,6 +16,8 @@ class MSMSource(Source):
         super().__init__("MSM", "tab")
 
     def generateNumberSequence(self, lengthTab):
+        if (lengthTab <= 1 ):
+            raise ValueError("size must be greater than 1")
         driver = webdriver.Chrome(ChromeDriverManager().install())
             
         # navigate to the website
@@ -49,9 +51,12 @@ class MSMSource(Source):
         output_text = output_div.get_attribute("value")
 
         l = output_text.split(', ')
+        for i in range(len(l)):
+            if l[i].startswith('0'):
+                l[i] = l[i][1:]
         numbers = [int(st) for st in l]
-        print(numbers)
-        self.setNumberSequence(numbers)
+        self.setNumberSequence(numbers[:-1])
+        self.setNextNumber(numbers[-1])
         
         # close the webdriver
         driver.quit()
