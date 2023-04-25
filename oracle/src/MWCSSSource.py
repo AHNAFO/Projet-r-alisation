@@ -1,5 +1,6 @@
 import subprocess
 import json
+from Source import Source
 
 class MCSSSource(Source):
     def __init__(self):
