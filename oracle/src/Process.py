@@ -54,5 +54,5 @@ def testMSM():
 
 if __name__ == "__main__":
     # process() 
-    testMT()
+    # testMT()
     testMSM()

@@ -27,11 +27,11 @@ class MSMSource(Source):
         )
         # find the input fields and submit button
 
-        seed_input = driver.find_element_by_id('MSM_seed')
-        num_count = driver.find_element_by_id('MSM_count')
-        digits_count = driver.find_element_by_id('MSM_digits')
-        output_div = driver.find_element_by_id('MSM_output')
-        submit_btn = driver.find_element_by_xpath('//input[@value="Generate random numbers!"]')
+        seed_input = driver.find_element(By.ID, 'MSM_seed')
+        num_count = driver.find_element(By.ID, 'MSM_count')
+        digits_count = driver.find_element(By.ID, 'MSM_digits')
+        output_div = driver.find_element(By.ID, 'MSM_output')
+        submit_btn = driver.find_element('xpath','//input[@value="Generate random numbers!"]')
 
         # enter the data and submit the form
         seed_input.clear()
