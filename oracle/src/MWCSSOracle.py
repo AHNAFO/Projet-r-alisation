@@ -1,16 +1,32 @@
-#!/usr/bin/python3
 import z3
 import struct
 import sys
 
 
+from Predictor import Predictor
+
+
+
+class LCGOracle(Predictor):
+
+    def __init__(self):
+        super().__init__("MersenneTwister", "tab")
+
+    def predictNextNumber(self):
+
+
+        self.setNextNumberPredicted(0)
+    
+    
+
+
 sequence = [
-  0.9311600617849973,
-  0.3551442693830502,
-  0.7923158995678377,
-  0.787777942408997,
-  0.376372264303491,
-  # 0.23137147109312428
+  0.9202432874329174,
+  0.24892978621310569,
+  0.053651553376290906,
+  0.6046211313472238,
+  0.786920710480457,
+  #0.28914834267624334
 ]
 
 sequence = sequence[::-1]
@@ -20,7 +36,7 @@ solver = z3.Solver()
 se_state0, se_state1 = z3.BitVecs("se_state0 se_state1", 64)
 
 for i in range(len(sequence)):
-  
+
     se_s1 = se_state0
     se_s0 = se_state1
     se_state0 = se_s0
@@ -30,11 +46,10 @@ for i in range(len(sequence)):
     se_s1 ^= z3.LShR(se_s0, 26)
     se_state1 = se_s1
 
-   
     float_64 = struct.pack("d", sequence[i] + 1)
     u_long_long_64 = struct.unpack("<Q", float_64)[0]
 
-    
+    # Get the lower 52 bits (mantissa)
     mantissa = u_long_long_64 & ((1 << 52) - 1)
 
     # Compare Mantissas
@@ -51,7 +66,6 @@ if solver.check() == z3.sat:
     print(states)
 
     state0 = states["se_state0"].as_long()
-
 
     u_long_long_64 = (state0 >> 12) | 0x3FF0000000000000
     float_64 = struct.pack("<Q", u_long_long_64)
