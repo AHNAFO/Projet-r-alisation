@@ -1,5 +1,4 @@
 from Predictor import Predictor
-from MSMSource import MSMSource
 class MSMOracle(Predictor):
 
     def __init__(self, numberSq):

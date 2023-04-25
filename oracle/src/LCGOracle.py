@@ -5,7 +5,7 @@ from Predictor import Predictor
 class LCGOracle(Predictor):
 
     def __init__(self):
-        super().__init__("MersenneTwister", "tab")
+        super().__init__("LCG", "tab")
 
     def predictNextNumber(self):
 

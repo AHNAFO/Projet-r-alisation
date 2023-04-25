@@ -5,5 +5,5 @@ class LFSRSource(Source):
     def __init__(self):
         super().__init__("LFSR", "tab")
 
-    def getNumberSequence(self, lengthTab):
+    def getNumberSequence(self):
         return
