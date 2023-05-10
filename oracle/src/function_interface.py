@@ -12,7 +12,33 @@ def calculate_begin(tab):
     for button in tab:
         if(button['text'] == 1):
             button_select.append(button)
-    print(button_select)
+    for button in button_select :
+        match(button['image']):
+            #SOURCE
+            case "pyimage8":
+                print("MERSENNE TWISTER")
+                
+            case "pyimage6":
+                print("BLUMBLUMSHUB")
+            
+            case "pyimage4":
+                print("LCG")
+            
+            case "pyimage2":
+                print("LFSR")
+                
+            # PREDICTEUR
+            case "pyimage16":
+                print("MERSENNE TWISTER")
+            
+            case "pyimage14":
+                print("BLUMBLUMSHUB")
+            
+            case "pyimage12":
+                print("LCG")
+                
+            case "pyimage10":
+                print("LFSR")
         
 
     
@@ -56,4 +82,3 @@ def change_color_button(button,image,image_select):
     
 
 
-#figd_kosFLAvYrOXFWrJ8zvfKiLAItr1eN9I4TBaLzAUF
