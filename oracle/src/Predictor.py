@@ -8,9 +8,15 @@ class Predictor(object):
 
     def setNumberSequence(self, numberSequence):
         self.numberSequence = numberSequence
+    
+    def setLastNumberSequence(self, lastNumber):
+        self.lastNumber = lastNumber
 
     def setNextNumberPredicted(self, nextNumberPredicted):
         self.nextNumberPredicted = nextNumberPredicted
+    
+    def getLastNumberSequence(self):
+        return self.lastNumber
 
     def getNumberSequence(self):
         return self.numberSequence

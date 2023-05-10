@@ -23,8 +23,6 @@ window.geometry("1074x527")
 window.configure(bg = "#000000")
 
 
-variableGlobale()
-
 canvas = Canvas(
     window,
     bg = "#000000",
@@ -276,7 +274,7 @@ def begin():
             659.000732421875,
             450.0,
             anchor="nw",
-            text=predicteur.getNumberSequence(),
+            text=predicteur.getLastNumberSequence(),
             fill="#38B6FF",
             font=("Junge Regular", 26 * -1),
             tag="attendu"
@@ -416,8 +414,6 @@ canvas.create_text(
     fill="#38B6FF",
     font=("Junge Regular", 26 * -1)
 )
-
-
 
 canvas.create_text(
     106.00067138671875,
