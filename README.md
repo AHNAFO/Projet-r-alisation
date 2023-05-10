@@ -8,3 +8,9 @@ Ahmed Aboelnaga,  Michelle Martin, Adam Ouali, Charles Chaudron, Ulysse Dahiez
 ## ANTIQUITÉ
 Réponse qu'une divinité donnait à ceux qui la consultaient.
 Les oracles de la pythie.
+
+
+```bash
+py -m pip install --user z3-solver
+py -m pip install --user z3
+```

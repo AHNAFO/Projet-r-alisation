@@ -22,3 +22,8 @@ class LCGSource(Source):
             random_numbers.append(x % lengthTab)
         self.seed = x
         self.setNumberSequence(random_numbers)
+
+
+""" lcg = LCGSource()
+lcg.generateNumberSequence(20)
+print(lcg.getNumberSequence()) """

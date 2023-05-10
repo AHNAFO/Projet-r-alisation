@@ -1,6 +1,5 @@
 import z3
 import struct
-import sys
 
 
 from Predictor import Predictor
@@ -13,9 +12,7 @@ class MWCSSOracle(Predictor):
         super().__init__("MWCSS", "tab")
 
     def predictNextNumber(self):
-
-
-        sequence = self.getNumberSequence()
+        sequence = self.getNumberSequence()[-5:]
 
         sequence = sequence[::-1]
 

@@ -1,4 +1,3 @@
-
 class Predictor(object):
     def __init__(self, name: str, type: str):
         self.name = name
@@ -19,6 +18,6 @@ class Predictor(object):
     def generateNumberSequence(self):
         pass
 
-    def predictNextNumber(self, sequence):
-        # TODO: Override in children
+    def predictNextNumber(self):
+        self.setNextNumberPredicted(0)
         pass
