@@ -10,10 +10,10 @@ def variableGlobale():
 def calculate_begin(tab):
     button_select = []
     for button in tab:
+        
         if(button['text'] == 1):
             button_select.append(button)
     for button in button_select :
-        print(button['image'])
         match(button['image']):
             #PREDICT
             case "pyimage8":
@@ -57,10 +57,10 @@ def change_color_button(button,image,image_select):
     global check_source
     global check_predicteur
         
-    source_select = ['pyimage16','pyimage14','pyimage12','pyimage10','pyimage20']
-    source_deselect = ['pyimage15','pyimage13','pyimage11','pyimage9','pyimage19']
-    predicteur_select = ['pyimage8','pyimage6','pyimage4','pyimage2','pyimage22','pyimage18']
-    predicteur_deselect = ['pyimage7','pyimage5','pyimage3','pyimage1','pyimage21','pyimage17']
+    source_deselect = ['pyimage15','pyimage14','pyimage12','pyimage10','pyimage20']
+    source_select = ['pyimage16','pyimage13','pyimage11','pyimage9','pyimage19']
+    predicteur_deselect = ['pyimage8','pyimage6','pyimage4','pyimage2','pyimage22','pyimage18']
+    predicteur_select = ['pyimage7','pyimage5','pyimage3','pyimage1','pyimage21','pyimage17']
     
     print(button['image'])
     

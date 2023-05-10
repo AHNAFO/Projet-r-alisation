@@ -319,7 +319,7 @@ canvas.create_text(
 )
 canvas.create_text(
     500.0,
-    392.0,
+    3.0,
     anchor="nw",
     text="?",
     fill="#38B6FF",
