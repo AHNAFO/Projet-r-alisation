@@ -264,9 +264,29 @@ button_17 = Button(
     relief="flat"
 )
 
+
+def getEntry():
+    val = entry_1.get()
+    return val
+
+
+entry_1 = Entry()
+entry_1.place(
+    x=659.000732421875,
+    y=212.0,
+    width=345.0,
+    height=41.0
+)
+
 def begin():
+    
     to_affiche = []
-    to_affiche = calculate_begin(tab_buttons)
+    val = getEntry()
+    if(val):
+        human = val
+    else:
+        human = ""
+    to_affiche = calculate_begin(tab_buttons, human)
     for predicteur in to_affiche:
         ##ATTENDU
         canvas.delete("attendu")
@@ -431,24 +451,5 @@ canvas.create_rectangle(
     fill="#3B37FF",
     outline="")
 
-entry_image_1 = PhotoImage(
-    file=relative_to_assets("entry_1.png"))
-entry_bg_1 = canvas.create_image(
-    831.500732421875,
-    233.5,
-    image=entry_image_1
-)
-entry_1 = Text(
-    bd=0,
-    bg="#4A4545",
-    fg="#000716",
-    highlightthickness=0
-)
-entry_1.place(
-    x=659.000732421875,
-    y=212.0,
-    width=345.0,
-    height=41.0
-)
 window.resizable(False, False)
 window.mainloop()

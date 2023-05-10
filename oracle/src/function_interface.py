@@ -15,9 +15,12 @@ from MSMOracle import MSMOracle
 from MvsMOracle import MvsMOracle
 
 
-def calculate_begin(tab):
+def calculate_begin(tab, human):
     button_select = []
-    
+    ##Verif si chaine de caractere rentree
+    if(human != ""):
+        tab.pop(0)
+        source = HumanSource()
     for button in tab:
         if(button['text'] == 1):
             button_select.append(button)
@@ -71,17 +74,14 @@ def calculate_begin(tab):
                 #print("MSM")
                 predictors.append(MSMOracle())
 
-            
             case "pyimage4":
                 #print("LCG")
                 predictors.append(LCGOracle())
 
-                
             case "pyimage2":
                 #print("MWCSS")
                 predictors.append(MWCSSOracle())
 
-            
             case "pyimage18":
                 #print("KNN")
                 predictors.append(RandomOrgOracle())
