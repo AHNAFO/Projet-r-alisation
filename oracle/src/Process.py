@@ -11,6 +11,7 @@ from MSMSource_web import MSMSource_web
 from MSMSource_local import MSMSource_local
 from MSMOracle import MSMOracle
 from Predictor import Predictor
+from MvsMOracle import MvsMOracle
 
 # - oracle
 from MersenneTwisterOracle import MersenneTwisterOracle
@@ -27,7 +28,7 @@ def process():
         (MCSSSource(), MWCSSOracle()),
         (MSMSource_local(), MSMOracle()),
         # (MSMSource_web(), MSMOracle()),
-        # (HumanSource(), Predictor('human', 'tab')),
+        (HumanSource(), MvsMOracle()),
     ]
 
     resultatsDesSources = {}
@@ -36,7 +37,8 @@ def process():
         numberSequence = source.getNumberSequence()
         oracle.setNumberSequence(numberSequence[0:-1])
         oracle.predictNextNumber()
-        resultatsDesSources[source.getName()] = { 'suivant': numberSequence[-1] , 'prédit': oracle.getNextNumberPredicted()}
+        resultatsDesSources[source.getName()] = {
+            'suivant': numberSequence[-1], 'prédit': oracle.getNextNumberPredicted()}
 
     print(resultatsDesSources)
 

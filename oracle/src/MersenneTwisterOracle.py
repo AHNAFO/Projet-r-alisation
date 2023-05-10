@@ -1,5 +1,6 @@
 from Predictor import Predictor
 
+
 class MersenneTwisterOracle(Predictor):
 
     def __init__(self):
@@ -12,7 +13,6 @@ class MersenneTwisterOracle(Predictor):
             randCrack.submit(number)
 
         self.setNextNumberPredicted(randCrack.predict_randrange(0, 4294967295))
-
 
 
 # cette classe est issue du dépot git de tna0y https://github.com/tna0y/Python-random-module-cracker
