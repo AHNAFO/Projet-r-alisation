@@ -1,11 +1,9 @@
 import z3
 import struct
 
-
 from Predictor import Predictor
 
 #attend un tabeau de 5 éléments 
-
 class MWCSSOracle(Predictor):
 
     def __init__(self):
@@ -47,8 +45,6 @@ class MWCSSOracle(Predictor):
             states = {}
             for state in model.decls():
                 states[state.__str__()] = model[state]
-
-            print(states)
 
             state0 = states["se_state0"].as_long()
 
