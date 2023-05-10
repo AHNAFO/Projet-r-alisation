@@ -13,4 +13,7 @@ Les oracles de la pythie.
 ```bash
 py -m pip install --user z3-solver
 py -m pip install --user z3
+py -m pip install --user requests
+py -m pip install --user selenium
+py -m pip install --user webdriver_manager
 ```
