@@ -54,3 +54,5 @@ class MWCSSOracle(Predictor):
             next_sequence -= 1
 
             self.setNextNumberPredicted(next_sequence)
+        else:
+            self.setNextNumberPredicted(0)

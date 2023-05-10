@@ -3,6 +3,9 @@ class Predictor(object):
         self.name = name
         self.type = type
 
+    def getName(self):
+        return self.name
+
     def setNumberSequence(self, numberSequence):
         self.numberSequence = numberSequence
 

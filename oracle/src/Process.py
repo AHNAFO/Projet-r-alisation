@@ -5,6 +5,7 @@ from HumanSource import HumanSource
 from LCGSource import LCGSource
 from LCGOracle import LCGOracle
 from RandomOrgSource import RandomOrgDecimalSource
+from RandomOrgSource import RandomOrgBinaireSource
 from MWCSSSource import MCSSSource
 from MWCSSOracle import MWCSSOracle
 from MSMSource_web import MSMSource_web
@@ -22,6 +23,7 @@ from MSMOracle import MSMOracle
 
 def process():
     dictSourcesOracle = [
+        (RandomOrgBinaireSource(), MvsMOracle()),
         (LCGSource(), LCGOracle()),
         (MersenneTwisterSource(), MersenneTwisterOracle()),
         (MCSSSource(), MWCSSOracle()),
