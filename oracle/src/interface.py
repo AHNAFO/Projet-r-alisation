@@ -311,7 +311,7 @@ canvas.create_text(
 )
 canvas.create_text(
     500.0,
-    216.0,
+    189.0,
     anchor="nw",
     text="?",
     fill="#38B6FF",
@@ -335,7 +335,31 @@ canvas.create_text(
 )
 canvas.create_text(
     500.0,
+    300.0,
+    anchor="nw",
+    text="?",
+    fill="#38B6FF",
+    font=("Junge Regular", 26 * -1)
+)
+canvas.create_text(
+    500.0,
+    290.0,
+    anchor="nw",
+    text="?",
+    fill="#38B6FF",
+    font=("Junge Regular", 26 * -1)
+)
+canvas.create_text(
+    500.0,
     275.0,
+    anchor="nw",
+    text="?",
+    fill="#38B6FF",
+    font=("Junge Regular", 26 * -1)
+)
+canvas.create_text(
+    500.0,
+    265.0,
     anchor="nw",
     text="?",
     fill="#38B6FF",

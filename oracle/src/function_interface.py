@@ -35,19 +35,19 @@ def calculate_begin(tab):
                 print("KNN")
                 
             # SOURCES
-            case "pyimage10":
+            case "pyimage20":
                 print("MCSS")
             
-            case "pyimage12":
+            case "pyimage16":
                 print("MERSENNE TWISTER")
             
             case "pyimage14":
                 print("MSM")
                 
-            case "pyimage16":
+            case "pyimage12":
                 print("LCG")
                 
-            case "pyimage20":
+            case "pyimage10":
                 print("RANDOM.ORG")
         
 
