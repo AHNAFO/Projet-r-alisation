@@ -2,7 +2,7 @@ from Predictor import Predictor
 class MSMOracle(Predictor):
 
     def __init__(self):
-        super().__init__("MiddleSquare", "tab")
+        super().__init__("MSM", "tab")
 
     def predictNextNumber(self):
         sequence = self.getNumberSequence()

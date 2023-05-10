@@ -41,7 +41,7 @@ def calculate_begin(tab):
             case "pyimage16":
                 print("MERSENNE TWISTER")
                 source = MersenneTwisterSource()
-                sequenceLength = 625
+                sequenceLength = 626
             
             case "pyimage14":
                 print("MSM")
@@ -93,6 +93,7 @@ def calculate_begin(tab):
                 print("KNN")
                 predictors.append(RandomOrgOracle())
     
+    # TODO: ici set le attendu genre setAttendu(numberSequence[-1])
     for predictor in predictors:
         predictor.setNumberSequence(numberSequence[:-1])
         try :
@@ -100,6 +101,7 @@ def calculate_begin(tab):
         except:
             predictor.setNextNumberPredicted(0)
 
+        # TODO: ici set le point d'interrogation genre setMachin(predictor.getName(), predictor.getNextNumberPredicted())
         print(predictor.getName(), numberSequence[-1], ' -> ', predictor.getNextNumberPredicted())
     
 

@@ -13,7 +13,7 @@ c'est pour ça que ça ne fonctionne pas.
 class RandomOrgOracle(Predictor):
 
     def __init__(self):
-        super().__init__("RandomOrg", "tab")
+        super().__init__("KNN", "tab")
 
     def predictNextNumber(self):
 
@@ -50,4 +50,4 @@ class RandomOrgOracle(Predictor):
 
         # Prendre les k plus proches voisins et calculer la moyenne de leurs sorties
         output = np.mean(y[idx[:k]])
-        return output
+        self.setNextNumberPredicted(output)
