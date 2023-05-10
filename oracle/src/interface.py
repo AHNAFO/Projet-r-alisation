@@ -49,7 +49,7 @@ button_1 = Button(
     text=False
 )
 button_1.place(
-    x=417.00067138671875,
+    x=280.00067138671875,
     y=393.0,
     width=188.00006103515625,
     height=33.0
@@ -70,7 +70,7 @@ button_2 = Button(
     text=False
 )
 button_2.place(
-    x=417.00067138671875,
+    x=280.00067138671875,
     y=334.0,
     width=188.00006103515625,
     height=33.0
@@ -90,7 +90,7 @@ button_3 = Button(
     text=False
 )
 button_3.place(
-    x=417.00067138671875,
+    x=280.00067138671875,
     y=275.0,
     width=188.00006103515625,
     height=33.0
@@ -110,8 +110,8 @@ button_4 = Button(
     text=False
 )
 button_4.place(
-    x=417.00067138671875,
-    y=216.0,
+    x=280.00067138671875,
+    y=217.0,
     width=188.00006103515625,
     height=33.0
 )
@@ -216,10 +216,18 @@ tab_buttons = [button_1,button_2,button_3,button_4,button_5,button_6,button_7,bu
 
 
 canvas.create_text(
-    414.00067138671875,
+    280.00067138671875,
     158.0,
     anchor="nw",
     text="Choisir 1 à 4 prédicteur",
+    fill="#38B6FF",
+    font=("Junge Regular", 18 * -1)
+)
+canvas.create_text(
+    80.0,
+    158.0,
+    anchor="nw",
+    text="Choisir 1 à 4 sources",
     fill="#38B6FF",
     font=("Junge Regular", 18 * -1)
 )
@@ -232,17 +240,25 @@ canvas.create_text(
     fill="#38B6FF",
     font=("Junge Regular", 18 * -1)
 )
-
+##############################
 canvas.create_text(
-    331.00067138671875,
-    217.0,
+    480.0,
+    158.0,
+    anchor="nw",
+    text="Suivant",
+    fill="#38B6FF",
+    font=("Junge Regular", 18 * -1)
+)
+canvas.create_text(
+    500.0,
+    216.0,
     anchor="nw",
     text="?",
     fill="#38B6FF",
     font=("Junge Regular", 26 * -1)
 )
 canvas.create_text(
-    331.00067138671875,
+    500.0,
     392.0,
     anchor="nw",
     text="?",
@@ -250,7 +266,7 @@ canvas.create_text(
     font=("Junge Regular", 26 * -1)
 )
 canvas.create_text(
-    331.00067138671875,
+    500.0,
     334.0,
     anchor="nw",
     text="?",
@@ -258,13 +274,33 @@ canvas.create_text(
     font=("Junge Regular", 26 * -1)
 )
 canvas.create_text(
-    331.00067138671875,
+    500.0,
     275.0,
     anchor="nw",
     text="?",
     fill="#38B6FF",
     font=("Junge Regular", 26 * -1)
 )
+
+#######################
+#ATTENDU
+canvas.create_text(
+    659.000732421875,
+    400.0,
+    anchor="nw",
+    text="Attendu",
+    fill="#38B6FF",
+    font=("Junge Regular", 26 * -1)
+)
+canvas.create_text(
+    659.000732421875,
+    450.0,
+    anchor="nw",
+    text="?",
+    fill="#38B6FF",
+    font=("Junge Regular", 26 * -1)
+)
+
 
 canvas.create_text(
     106.00067138671875,
