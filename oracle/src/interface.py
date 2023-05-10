@@ -272,7 +272,7 @@ button_17.place(
     height=48.4000244140625
 )
 
-tab_buttons = [button_1,button_2,button_3,button_4,button_5,button_6,button_7,button_8]
+tab_buttons = [button_1,button_2,button_3,button_4,button_5,button_6,button_7,button_8, button_19, button_20, button_22]
 
 
 canvas.create_text(

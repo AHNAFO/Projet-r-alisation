@@ -13,32 +13,42 @@ def calculate_begin(tab):
         if(button['text'] == 1):
             button_select.append(button)
     for button in button_select :
+        print(button['image'])
         match(button['image']):
-            #SOURCE
+            #PREDICT
             case "pyimage8":
                 print("MERSENNE TWISTER")
                 
+            case "pyimage22":
+                print("MVSM")
+            
             case "pyimage6":
-                print("BLUMBLUMSHUB")
+                print("MSM")
             
             case "pyimage4":
                 print("LCG")
-            
-            case "pyimage2":
-                print("LFSR")
                 
-            # PREDICTEUR
-            case "pyimage16":
+            case "pyimage2":
+                print("MWCSS")
+            
+            case "pyimage18":
+                print("KNN")
+                
+            # SOURCES
+            case "pyimage10":
+                print("MCSS")
+            
+            case "pyimage12":
                 print("MERSENNE TWISTER")
             
             case "pyimage14":
-                print("BLUMBLUMSHUB")
-            
-            case "pyimage12":
+                print("MSM")
+                
+            case "pyimage16":
                 print("LCG")
                 
-            case "pyimage10":
-                print("LFSR")
+            case "pyimage20":
+                print("RANDOM.ORG")
         
 
     
@@ -47,11 +57,12 @@ def change_color_button(button,image,image_select):
     global check_source
     global check_predicteur
         
-    source_select = ['pyimage16','pyimage14','pyimage12','pyimage10']
-    source_deselect = ['pyimage15','pyimage13','pyimage11','pyimage9']
-    predicteur_select = ['pyimage8','pyimage6','pyimage4','pyimage2']
-    predicteur_deselect = ['pyimage7','pyimage5','pyimage3','pyimage1']
+    source_select = ['pyimage16','pyimage14','pyimage12','pyimage10','pyimage20']
+    source_deselect = ['pyimage15','pyimage13','pyimage11','pyimage9','pyimage19']
+    predicteur_select = ['pyimage8','pyimage6','pyimage4','pyimage2','pyimage22','pyimage18']
+    predicteur_deselect = ['pyimage7','pyimage5','pyimage3','pyimage1','pyimage21','pyimage17']
     
+    print(button['image'])
     
     #Change couleur -------------
     if(button['text'] == True):
