@@ -19,7 +19,7 @@ class LCGSource(Source):
         x = self.seed
         for i in range(lengthTab):
             x = (self.a * x + self.c) % self.m
-            random_numbers.append(x % lengthTab)
+            random_numbers.append(x)
         self.seed = x
         self.setNumberSequence(random_numbers)
 
