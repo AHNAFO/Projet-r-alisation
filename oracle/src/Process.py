@@ -4,7 +4,6 @@ from MersenneTwisterOracle import MersenneTwisterOracle
 from HumanSource import HumanSource
 from LCGSource import LCGSource
 from LCGOracle import LCGOracle
-from LFSRSource import LFSRSource
 from RandomOrgSource import RandomOrgDecimalSource
 from MWCSSSource import MCSSSource
 from MWCSSOracle import MWCSSOracle
