@@ -19,18 +19,17 @@ def relative_to_assets(path: str) -> Path:
 
 window = Tk()
 
-window.geometry("1095x636")
+window.geometry("1074x527")
 window.configure(bg = "#000000")
 
 
 variableGlobale()
 
-
 canvas = Canvas(
     window,
     bg = "#000000",
-    height = 636,
-    width = 1095,
+    height = 527,
+    width = 1074,
     bd = 0,
     highlightthickness = 0,
     relief = "ridge"
@@ -50,9 +49,9 @@ button_1 = Button(
     text=False
 )
 button_1.place(
-    x=645.0,
-    y=409.0,
-    width=188.0,
+    x=417.00067138671875,
+    y=393.0,
+    width=188.00006103515625,
     height=33.0
 )
 
@@ -71,9 +70,9 @@ button_2 = Button(
     text=False
 )
 button_2.place(
-    x=645.0,
-    y=350.0,
-    width=188.0,
+    x=417.00067138671875,
+    y=334.0,
+    width=188.00006103515625,
     height=33.0
 )
 
@@ -91,9 +90,9 @@ button_3 = Button(
     text=False
 )
 button_3.place(
-    x=645.0,
-    y=291.0,
-    width=188.0,
+    x=417.00067138671875,
+    y=275.0,
+    width=188.00006103515625,
     height=33.0
 )
 
@@ -111,9 +110,9 @@ button_4 = Button(
     text=False
 )
 button_4.place(
-    x=645.0,
-    y=232.0,
-    width=188.0,
+    x=417.00067138671875,
+    y=216.0,
+    width=188.00006103515625,
     height=33.0
 )
 
@@ -131,8 +130,8 @@ button_5 = Button(
     text=False
 )
 button_5.place(
-    x=297.0,
-    y=409.0,
+    x=69.00067138671875,
+    y=393.0,
     width=188.0,
     height=33.0
 )
@@ -151,8 +150,8 @@ button_6 = Button(
     text=False
 )
 button_6.place(
-    x=297.0,
-    y=350.0,
+    x=69.00067138671875,
+    y=334.0,
     width=188.0,
     height=33.0
 )
@@ -171,8 +170,8 @@ button_7 = Button(
     text=False
 )
 button_7.place(
-    x=297.0,
-    y=291.0,
+    x=69.00067138671875,
+    y=275.0,
     width=188.0,
     height=33.0
 )
@@ -191,15 +190,34 @@ button_8 = Button(
     text=False
 )
 button_8.place(
-    x=297.0,
-    y=232.0,
+    x=69.00067138671875,
+    y=216.0,
     width=188.0,
     height=33.0
 )
 
+button_image_17 = PhotoImage(
+    file=relative_to_assets("button_17.png"))
+button_17 = Button(
+    image=button_image_17,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: calculate_begin(tab_buttons),
+    relief="flat"
+)
+button_17.place(
+    x=753.000732421875,
+    y=297.0,
+    width=129.0,
+    height=48.4000244140625
+)
+
+tab_buttons = [button_1,button_2,button_3,button_4,button_5,button_6,button_7,button_8]
+
+
 canvas.create_text(
-    642.0,
-    174.0,
+    414.00067138671875,
+    158.0,
     anchor="nw",
     text="Choisir 1 à 4 prédicteur",
     fill="#38B6FF",
@@ -207,29 +225,81 @@ canvas.create_text(
 )
 
 canvas.create_text(
-    306.0,
-    174.0,
+    659.000732421875,
+    180.0,
     anchor="nw",
-    text="Choisir 1 à 4 sources",
+    text="Entrer une source de 0 et 1 (optionnel)",
     fill="#38B6FF",
     font=("Junge Regular", 18 * -1)
 )
 
 canvas.create_text(
-    197.0,
-    33.0,
+    331.00067138671875,
+    217.0,
+    anchor="nw",
+    text="?",
+    fill="#38B6FF",
+    font=("Junge Regular", 26 * -1)
+)
+canvas.create_text(
+    331.00067138671875,
+    392.0,
+    anchor="nw",
+    text="?",
+    fill="#38B6FF",
+    font=("Junge Regular", 26 * -1)
+)
+canvas.create_text(
+    331.00067138671875,
+    334.0,
+    anchor="nw",
+    text="?",
+    fill="#38B6FF",
+    font=("Junge Regular", 26 * -1)
+)
+canvas.create_text(
+    331.00067138671875,
+    275.0,
+    anchor="nw",
+    text="?",
+    fill="#38B6FF",
+    font=("Junge Regular", 26 * -1)
+)
+
+canvas.create_text(
+    106.00067138671875,
+    37.0,
     anchor="nw",
     text="WHO IS THE BEST PREDICTOR ?",
     fill="#38B6FF",
     font=("JuliusSansOne Regular", 36 * -1)
 )
-
 canvas.create_rectangle(
-    159.99932861328125,
-    107.5,
-    924.9993896484375,
-    108.5,
-    fill="#000000",
+    63.0,
+    105.5,
+    834.0,
+    112.5,
+    fill="#3B37FF",
     outline="")
+
+entry_image_1 = PhotoImage(
+    file=relative_to_assets("entry_1.png"))
+entry_bg_1 = canvas.create_image(
+    831.500732421875,
+    233.5,
+    image=entry_image_1
+)
+entry_1 = Text(
+    bd=0,
+    bg="#4A4545",
+    fg="#000716",
+    highlightthickness=0
+)
+entry_1.place(
+    x=659.000732421875,
+    y=212.0,
+    width=345.0,
+    height=41.0
+)
 window.resizable(False, False)
 window.mainloop()
