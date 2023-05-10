@@ -11,6 +11,7 @@ from MSMSource_web import MSMSource_web
 from MSMSource_local import MSMSource_local
 from MSMOracle import MSMOracle
 from Predictor import Predictor
+from MvsMOracle import MvsMOracle
 
 # - oracle
 from MersenneTwisterOracle import MersenneTwisterOracle
@@ -23,20 +24,24 @@ def process():
     dictSourcesOracle = [
         (LCGSource(), LCGOracle()),
         (MersenneTwisterSource(), MersenneTwisterOracle()),
-        (RandomOrgDecimalSource(), Predictor('Random org decimal', 'tab')),
         (MCSSSource(), MWCSSOracle()),
         (MSMSource_local(), MSMOracle()),
+        (HumanSource(), MvsMOracle()),
         # (MSMSource_web(), MSMOracle()),
-        # (HumanSource(), Predictor('human', 'tab')),
+        # (RandomOrgDecimalSource(), Predictor('Random org decimal', 'tab')),
     ]
 
     resultatsDesSources = {}
     for (source, oracle) in dictSourcesOracle:
-        source.generateNumberSequence(666)
+        source.generateNumberSequence(200)
         numberSequence = source.getNumberSequence()
         oracle.setNumberSequence(numberSequence[0:-1])
-        oracle.predictNextNumber()
-        resultatsDesSources[source.getName()] = { 'suivant': numberSequence[-1] , 'prédit': oracle.getNextNumberPredicted()}
+        try :
+            oracle.predictNextNumber()
+        except:
+            oracle.setNextNumberPredicted(0)
+        resultatsDesSources[source.getName()] = {
+            'suivant': numberSequence[-1], 'prédit': oracle.getNextNumberPredicted()}
 
     print(resultatsDesSources)
 
@@ -69,5 +74,3 @@ def testMSM():
 
 if __name__ == "__main__":
     process()
-    # testMT()
-    # testMSM()
