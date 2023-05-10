@@ -111,7 +111,7 @@ button_4 = Button(
 )
 button_4.place(
     x=280.00067138671875,
-    y=217.0,
+    y=190.0,
     width=188.00006103515625,
     height=33.0
 )
@@ -191,7 +191,67 @@ button_8 = Button(
 )
 button_8.place(
     x=69.00067138671875,
-    y=216.0,
+    y=225.0,
+    width=188.0,
+    height=33.0
+)
+
+button_image_19 = PhotoImage(
+    file=relative_to_assets("button_19.png"))
+button_image_19_select = PhotoImage(
+    file=relative_to_assets("button_18.png"))
+
+button_19 = Button(
+    image=button_image_19,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: change_color_button(button_19,button_image_19,button_image_19_select),
+    relief="flat",
+    text=False
+)
+button_19.place(
+    x=280.00067138671875,
+    y=450.0,
+    width=188.0,
+    height=33.0
+)
+
+button_image_20 = PhotoImage(
+    file=relative_to_assets("button_20.png"))
+button_image_20_select = PhotoImage(
+    file=relative_to_assets("button_21.png"))
+
+button_20 = Button(
+    image=button_image_20,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: change_color_button(button_20,button_image_20,button_image_20_select),
+    relief="flat",
+    text=False
+)
+button_20.place(
+    x=69.00067138671875,
+    y=190.0,
+    width=188.0,
+    height=33.0
+)
+
+button_image_22 = PhotoImage(
+    file=relative_to_assets("button_22.png"))
+button_image_22_select = PhotoImage(
+    file=relative_to_assets("button_23.png"))
+
+button_22 = Button(
+    image=button_image_22,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: change_color_button(button_22,button_image_22,button_image_22_select),
+    relief="flat",
+    text=False
+)
+button_22.place(
+    x=280.00067138671875,
+    y=226.0,
     width=188.0,
     height=33.0
 )
