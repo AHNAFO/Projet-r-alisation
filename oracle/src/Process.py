@@ -24,19 +24,22 @@ def process():
     dictSourcesOracle = [
         (LCGSource(), LCGOracle()),
         (MersenneTwisterSource(), MersenneTwisterOracle()),
-        (RandomOrgDecimalSource(), Predictor('Random org decimal', 'tab')),
         (MCSSSource(), MWCSSOracle()),
         (MSMSource_local(), MSMOracle()),
-        # (MSMSource_web(), MSMOracle()),
         (HumanSource(), MvsMOracle()),
+        # (MSMSource_web(), MSMOracle()),
+        # (RandomOrgDecimalSource(), Predictor('Random org decimal', 'tab')),
     ]
 
     resultatsDesSources = {}
     for (source, oracle) in dictSourcesOracle:
-        source.generateNumberSequence(666)
+        source.generateNumberSequence(200)
         numberSequence = source.getNumberSequence()
         oracle.setNumberSequence(numberSequence[0:-1])
-        oracle.predictNextNumber()
+        try :
+            oracle.predictNextNumber()
+        except:
+            oracle.setNextNumberPredicted(0)
         resultatsDesSources[source.getName()] = {
             'suivant': numberSequence[-1], 'prédit': oracle.getNextNumberPredicted()}
 
@@ -71,5 +74,3 @@ def testMSM():
 
 if __name__ == "__main__":
     process()
-    # testMT()
-    # testMSM()
