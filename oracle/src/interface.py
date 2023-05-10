@@ -281,20 +281,20 @@ def begin():
         )
         match(predicteur.getName()):
             #PREDICT
-            case "MersenneTwiter":
+            case "MersenneTwister":
                 print("MERSENNE TWISTER")
                 canvas.delete("mersenne")
                 canvas.create_text(
                     500.0,
-                    225.0,
+                    188.0,
                     anchor="nw",
                     text=predicteur.getNextNumberPredicted(),
                     fill="#38B6FF",
                     font=("Junge Regular", 26 * -1),
                     tag="mersenne"
                 )
-            case "MVSM":
-                print("MVSM")
+            case "MvsM":
+                print("MvsM")
                 canvas.delete("mvsm")
                 canvas.create_text(
                     500.0,
