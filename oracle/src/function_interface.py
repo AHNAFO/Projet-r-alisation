@@ -25,6 +25,7 @@ def variableGlobale():
 
 def calculate_begin(tab):
     button_select = []
+    
     for button in tab:
         if(button['text'] == 1):
             button_select.append(button)
@@ -66,44 +67,46 @@ def calculate_begin(tab):
         match(button['image']):
             #PREDICT
             case "pyimage8":
-                print("MERSENNE TWISTER")
+                #print("MERSENNE TWISTER")
                 predictors.append(MersenneTwisterOracle())
                 
             case "pyimage22":
-                print("MVSM")
+                #print("MVSM")
                 predictors.append(MvsMOracle())
 
             
             case "pyimage6":
-                print("MSM")
+                #print("MSM")
                 predictors.append(MSMOracle())
 
             
             case "pyimage4":
-                print("LCG")
+                #print("LCG")
                 predictors.append(LCGOracle())
 
                 
             case "pyimage2":
-                print("MWCSS")
+                #print("MWCSS")
                 predictors.append(MWCSSOracle())
 
             
             case "pyimage18":
-                print("KNN")
+                #print("KNN")
                 predictors.append(RandomOrgOracle())
     
     # TODO: ici set le attendu genre setAttendu(numberSequence[-1])
+    to_render = []
     for predictor in predictors:
         predictor.setNumberSequence(numberSequence[:-1])
+        to_render.append(predictor)
         try :
             predictor.predictNextNumber()
         except:
             predictor.setNextNumberPredicted(0)
-
+        to_render.append(predictor)      
         # TODO: ici set le point d'interrogation genre setMachin(predictor.getName(), predictor.getNextNumberPredicted())
-        print(predictor.getName(), numberSequence[-1], ' -> ', predictor.getNextNumberPredicted())
-    
+        #print(predictor.getName(), numberSequence[-1], ' -> ', predictor.getNextNumberPredicted())
+    return to_render
 
 
     

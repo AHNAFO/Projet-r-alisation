@@ -262,9 +262,104 @@ button_17 = Button(
     image=button_image_17,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: calculate_begin(tab_buttons),
+    command=lambda: begin(),
     relief="flat"
 )
+
+def begin():
+    to_affiche = []
+    to_affiche = calculate_begin(tab_buttons)
+    for predicteur in to_affiche:
+        ##ATTENDU
+        canvas.delete("attendu")
+        canvas.create_text(
+            659.000732421875,
+            450.0,
+            anchor="nw",
+            text=predicteur.getNumberSequence(),
+            fill="#38B6FF",
+            font=("Junge Regular", 26 * -1),
+            tag="attendu"
+        )
+        match(predicteur.getName()):
+            #PREDICT
+            case "MersenneTwiter":
+                print("MERSENNE TWISTER")
+                canvas.delete("mersenne")
+                canvas.create_text(
+                    500.0,
+                    225.0,
+                    anchor="nw",
+                    text=predicteur.getNextNumberPredicted(),
+                    fill="#38B6FF",
+                    font=("Junge Regular", 26 * -1),
+                    tag="mersenne"
+                )
+            case "MVSM":
+                print("MVSM")
+                canvas.delete("mvsm")
+                canvas.create_text(
+                    500.0,
+                    232.0,
+                    anchor="nw",
+                    text=predicteur.getNextNumberPredicted(),
+                    fill="#38B6FF",
+                    font=("Junge Regular", 26 * -1),
+                    tag="mvsm"
+                )
+           
+            case "MSM":
+                print("MSM")
+                canvas.delete("msm")
+                canvas.create_text(
+                    500.0,
+                    280.0,
+                    anchor="nw",
+                    text=predicteur.getNextNumberPredicted(),
+                    fill="#38B6FF",
+                    font=("Junge Regular", 26 * -1),
+                    tag="msm",
+                )
+            
+            case "LCG":
+                print("LCG")
+                canvas.delete("lcg")
+                canvas.create_text(
+                    500.0,
+                    340.0,
+                    anchor="nw",
+                    text=predicteur.getNextNumberPredicted(),
+                    fill="#38B6FF",
+                    font=("Junge Regular", 26 * -1),
+                    tag="lcg"
+                )
+                
+            case "MWCSS":
+                print("MWCSS")
+                canvas.delete("mwcss")
+                canvas.create_text(
+                    500.0,
+                    400.0,
+                    anchor="nw",
+                    text=predicteur.getNextNumberPredicted(),
+                    fill="#38B6FF",
+                    font=("Junge Regular", 26 * -1),
+                    tag="mwcss"
+                )  
+            
+            case "KNN":
+                print("KNN")  
+                canvas.delete("knn")
+                canvas.create_text(
+                    500.0,
+                    450.0,
+                    anchor="nw",
+                    text=predicteur.getNextNumberPredicted(),
+                    fill="#38B6FF",
+                    font=("Junge Regular", 26 * -1),
+                    tag="knn"
+                ) 
+                       
 button_17.place(
     x=753.000732421875,
     y=297.0,
@@ -274,20 +369,21 @@ button_17.place(
 
 tab_buttons = [button_1,button_2,button_3,button_4,button_5,button_6,button_7,button_8, button_19, button_20, button_22]
 
+#canva.delete('all')
 
 canvas.create_text(
     280.00067138671875,
     158.0,
     anchor="nw",
-    text="Choisir 1 à 4 prédicteur",
+    text="Choisir plusieurs",
     fill="#38B6FF",
-    font=("Junge Regular", 18 * -1)
+    font=("Junge Regular", 18 * -1),
 )
 canvas.create_text(
     80.0,
     158.0,
     anchor="nw",
-    text="Choisir 1 à 4 sources",
+    text="Choisir 1 source",
     fill="#38B6FF",
     font=("Junge Regular", 18 * -1)
 )
@@ -309,81 +405,18 @@ canvas.create_text(
     fill="#38B6FF",
     font=("Junge Regular", 18 * -1)
 )
-canvas.create_text(
-    500.0,
-    189.0,
-    anchor="nw",
-    text="?",
-    fill="#38B6FF",
-    font=("Junge Regular", 26 * -1)
-)
-canvas.create_text(
-    500.0,
-    225.0,
-    anchor="nw",
-    text="?",
-    fill="#38B6FF",
-    font=("Junge Regular", 26 * -1)
-)
-canvas.create_text(
-    500.0,
-    280.0,
-    anchor="nw",
-    text="?",
-    fill="#38B6FF",
-    font=("Junge Regular", 26 * -1)
-)
-canvas.create_text(
-    500.0,
-    340.0,
-    anchor="nw",
-    text="?",
-    fill="#38B6FF",
-    font=("Junge Regular", 26 * -1)
-)
-canvas.create_text(
-    500.0,
-    340.0,
-    anchor="nw",
-    text="?",
-    fill="#38B6FF",
-    font=("Junge Regular", 26 * -1)
-)
-canvas.create_text(
-    500.0,
-    400.0,
-    anchor="nw",
-    text="?",
-    fill="#38B6FF",
-    font=("Junge Regular", 26 * -1)
-)
-canvas.create_text(
-    500.0,
-    450.0,
-    anchor="nw",
-    text="?",
-    fill="#38B6FF",
-    font=("Junge Regular", 26 * -1)
-)
 
 #######################
 #ATTENDU
 canvas.create_text(
-    659.000732421875,
+    800.000732421875,
     400.0,
     anchor="nw",
     text="Attendu",
     fill="#38B6FF",
     font=("Junge Regular", 26 * -1)
 )
-canvas.create_text(
-    659.000732421875,
-    450.0,
-    anchor="nw",
-    text="?",
-    fill="#38B6FF",
-    font=("Junge Regular", 26 * -1)
-)
+
 
 
 canvas.create_text(
