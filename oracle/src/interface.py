@@ -282,94 +282,7 @@ def begin():
     
     to_affiche = []
     val = getEntry()
-    if(val):
-        human = val
-    else:
-        human = ""
-    to_affiche = calculate_begin(tab_buttons, human)
-    canvas.delete("suivant")
-    canvas.create_text(
-        760,
-        450.0,
-        anchor="nw",
-        text='',
-        fill="#38B6FF",
-        font=("Junge Regular", 26 * -1),
-        tag="attendu"
-    )
-        #PREDICT
-            
-    print("MERSENNE TWISTER")
-    canvas.delete("mersenne")
-    canvas.create_text(
-        500.0,
-        188.0,
-        anchor="nw",
-        text='',
-        fill="#38B6FF",
-        font=("Junge Regular", 26 * -1),
-        tag="mersenne"
-    )
-
-    print("MvsM")
-    canvas.delete("mvsm")
-    canvas.create_text(
-        500.0,
-        232.0,
-        anchor="nw",
-        text='',
-        fill="#38B6FF",
-        font=("Junge Regular", 26 * -1),
-        tag="mvsm"
-    )
-
-    print("MSM")
-    canvas.delete("msm")
-    canvas.create_text(
-        500.0,
-        280.0,
-        anchor="nw",
-        text='',
-        fill="#38B6FF",
-        font=("Junge Regular", 26 * -1),
-        tag="msm",
-    )
-
-    print("LCG")
-    canvas.delete("lcg")
-    canvas.create_text(
-        500.0,
-        340.0,
-        anchor="nw",
-        text='',
-        fill="#38B6FF",
-        font=("Junge Regular", 26 * -1),
-        tag="lcg"
-    )
-    
-    print("MWCSS")
-    canvas.delete("mwcss")
-    canvas.create_text(
-        500.0,
-        400.0,
-        anchor="nw",
-        text='',
-        fill="#38B6FF",
-        font=("Junge Regular", 26 * -1),
-        tag="mwcss"
-    )  
-
-    print("KNN")  
-    canvas.delete("knn")
-    canvas.create_text(
-        500.0,
-        450.0,
-        anchor="nw",
-        text='',
-        fill="#38B6FF",
-        font=("Junge Regular", 26 * -1),
-        tag="knn"
-    ) 
+    to_affiche = calculate_begin(tab_buttons, val)
     for predicteur in to_affiche:
         ##ATTENDU
         canvas.delete("attendu")
@@ -470,7 +383,6 @@ button_17.place(
 
 tab_buttons = [button_1,button_2,button_3,button_4,button_5,button_6,button_7,button_8, button_19, button_20, button_22]
 
-#canva.delete('all')
 
 canvas.create_text(
     280.00067138671875,
