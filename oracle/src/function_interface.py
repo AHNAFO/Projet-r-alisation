@@ -54,7 +54,7 @@ def calculate_begin(tab, human):
                 source = RandomOrgBinaireSource()
                 sequenceLength = 50
 
-    source.generateNumberSequence(sequenceLength) if source else numberSequence
+    source.generateNumberSequence(sequenceLength)
     numberSequence = source.getNumberSequence()
     
     predictors = []
