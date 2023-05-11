@@ -15,6 +15,7 @@ py -m pip install --user requests
 py -m pip install --user selenium
 py -m pip install --user webdriver_manager
 py -m pip install --user tk
+py -m pip install --user hmmlearn
 ```
 
 ## Lancement
