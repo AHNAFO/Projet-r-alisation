@@ -292,7 +292,7 @@ def begin():
         760,
         450.0,
         anchor="nw",
-        text=predicteur.getLastNumberSequence(),
+        text='',
         fill="#38B6FF",
         font=("Junge Regular", 26 * -1),
         tag="attendu"
