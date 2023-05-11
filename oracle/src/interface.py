@@ -282,11 +282,8 @@ def begin():
     
     to_affiche = []
     val = getEntry()
-    if(val):
-        human = val
-    else:
-        human = ""
-    to_affiche = calculate_begin(tab_buttons, human)
+    to_affiche = calculate_begin(tab_buttons, val)
+    
     for predicteur in to_affiche:
         ##ATTENDU
         canvas.delete("attendu")
@@ -387,7 +384,6 @@ button_17.place(
 
 tab_buttons = [button_1,button_2,button_3,button_4,button_5,button_6,button_7,button_8, button_19, button_20, button_22]
 
-#canva.delete('all')
 
 canvas.create_text(
     280.00067138671875,

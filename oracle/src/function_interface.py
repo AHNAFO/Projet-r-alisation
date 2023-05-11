@@ -17,44 +17,47 @@ from MvsMOracle import MvsMOracle
 
 def calculate_begin(tab, human):
     button_select = []
+    
+    for button in tab:
+            if(button['text'] == 1):
+                button_select.append(button)
+    
     ##Verif si chaine de caractere rentree
     if(human != ""):
-        tab.pop(0)
         source = HumanSource()
-    for button in tab:
-        if(button['text'] == 1):
-            button_select.append(button)
-
-    numberSequence = []
-    sequenceLength = 0
-    for button in button_select :
-        match(button['image']):
-            case "pyimage20":
-                print("MCSS")
-                source = MCSSSource()
-                sequenceLength = 6
-            
-            case "pyimage16":
-                print("MERSENNE TWISTER")
-                source = MersenneTwisterSource()
-                sequenceLength = 626
-            
-            case "pyimage14":
-                print("MSM")
-                source = MSMSource_local()
-                sequenceLength = 10
+        source.generateNumberSequence(human)
+    else:
+        numberSequence = []
+        sequenceLength = 0
+        for button in button_select :
+            match(button['image']):
+                case "pyimage20":
+                    print("MCSS")
+                    source = MCSSSource()
+                    sequenceLength = 6
                 
-            case "pyimage12":
-                print("LCG")
-                source = LCGSource()
-                sequenceLength = 5
+                case "pyimage16":
+                    print("MERSENNE TWISTER")
+                    source = MersenneTwisterSource()
+                    sequenceLength = 626
                 
-            case "pyimage10":
-                print("RANDOM.ORG")
-                source = RandomOrgBinaireSource()
-                sequenceLength = 50
+                case "pyimage14":
+                    print("MSM")
+                    source = MSMSource_local()
+                    sequenceLength = 10
+                    
+                case "pyimage12":
+                    print("LCG")
+                    source = LCGSource()
+                    sequenceLength = 5
+                    
+                case "pyimage10":
+                    print("RANDOM.ORG")
+                    source = RandomOrgBinaireSource()
+                    sequenceLength = 50
 
-    source.generateNumberSequence(sequenceLength) if source else numberSequence
+        source.generateNumberSequence(sequenceLength) if source else numberSequence
+        
     numberSequence = source.getNumberSequence()
     
     predictors = []

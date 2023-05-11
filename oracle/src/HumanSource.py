@@ -5,4 +5,8 @@ class HumanSource(Source):
         super().__init__("Human", "tab")
 
     def generateNumberSequence(self, lengthTab):
-        return self.setNumberSequence('10101000001010101101001010001000100100101111111001011110010111')
+        str(lengthTab)
+        val = []
+        for bit in lengthTab:
+            val.append(bit)
+        return self.setNumberSequence(val)
