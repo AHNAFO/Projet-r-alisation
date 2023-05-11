@@ -287,7 +287,7 @@ def begin():
     else:
         human = ""
     to_affiche = calculate_begin(tab_buttons, human)
-    canvas.delete("attendu")
+    canvas.delete("suivant")
     canvas.create_text(
         760,
         450.0,
@@ -476,7 +476,7 @@ canvas.create_text(
     280.00067138671875,
     158.0,
     anchor="nw",
-    text="Choisir plusieurs",
+    text="Choisir prédicteur(s)",
     fill="#38B6FF",
     font=("Junge Regular", 18 * -1),
 )
@@ -484,7 +484,7 @@ canvas.create_text(
     80.0,
     158.0,
     anchor="nw",
-    text="Choisir 1 source",
+    text="Choisir une source",
     fill="#38B6FF",
     font=("Junge Regular", 18 * -1)
 )
@@ -502,7 +502,7 @@ canvas.create_text(
     480.0,
     158.0,
     anchor="nw",
-    text="Suivant",
+    text="Prédictions",
     fill="#38B6FF",
     font=("Junge Regular", 18 * -1)
 )
