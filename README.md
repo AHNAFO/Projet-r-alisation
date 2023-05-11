@@ -1,10 +1,12 @@
 # Projet-réalisation
+
 ### 2022-2023 ISEN AP4
-Ahmed Aboelnaga,  Michelle Martin, Adam Ouali, Charles Chaudron, Ulysse Dahiez
+
+Ahmed Aboelnaga, Michelle Martin, Adam Ouali, Charles Chaudron, Ulysse Dahiez
 
 ## Installation
 
-Voici les commandes à jouer pour installer les dépendances 
+Voici les commandes à jouer pour installer les dépendances
 
 ```bash
 py -m pip install --user z3-solver
@@ -12,6 +14,7 @@ py -m pip install --user z3
 py -m pip install --user requests
 py -m pip install --user selenium
 py -m pip install --user webdriver_manager
+py -m pip install --user tk
 ```
 
 ## Lancement
