@@ -291,7 +291,7 @@ def begin():
         ##ATTENDU
         canvas.delete("attendu")
         canvas.create_text(
-            659.000732421875,
+            760,
             450.0,
             anchor="nw",
             text=predicteur.getLastNumberSequence(),
