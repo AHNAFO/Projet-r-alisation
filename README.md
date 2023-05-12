@@ -20,3 +20,8 @@ Pour installer toutes les dépendances python nécessaires au projet, lancez la 
 ```bash
 py -m pip install -r requirements.txt
 ```
+
+# Installation des dépendances Node
+
+Node est nécessaire pour simuler la fonction d'aléat utilisé par JavaScript (algorithme MWC1616).
+Vous pouvez télécharger [node ici](https://nodejs.org/en/download).
