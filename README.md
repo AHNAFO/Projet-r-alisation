@@ -4,7 +4,7 @@
 
 Ahmed Aboelnaga, Michelle Martin, Adam Ouali, Charles Chaudron, Ulysse Dahiez
 
-# oracle
+## Installation
 
 ## ANTIQUITÉ
 
@@ -20,8 +20,3 @@ Pour installer toutes les dépendances python nécessaires au projet, lancez la 
 ```bash
 py -m pip install -r requirements.txt
 ```
-
-# Installation de node
-
-Node est utilisé dans ce projet pour simuler un appel de fonction random utilisé par JavaScript. (algorithme MWC1616)
-Il est donc nécessaire de l'installer [ici](https://nodejs.org/fr/download).

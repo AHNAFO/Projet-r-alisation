@@ -282,16 +282,12 @@ def begin():
     
     to_affiche = []
     val = getEntry()
-    if(val):
-        human = val
-    else:
-        human = ""
-    to_affiche = calculate_begin(tab_buttons, human)
+    to_affiche = calculate_begin(tab_buttons, val)
     for predicteur in to_affiche:
         ##ATTENDU
         canvas.delete("attendu")
         canvas.create_text(
-            659.000732421875,
+            760,
             450.0,
             anchor="nw",
             text=predicteur.getLastNumberSequence(),
@@ -387,13 +383,12 @@ button_17.place(
 
 tab_buttons = [button_1,button_2,button_3,button_4,button_5,button_6,button_7,button_8, button_19, button_20, button_22]
 
-#canva.delete('all')
 
 canvas.create_text(
     280.00067138671875,
     158.0,
     anchor="nw",
-    text="Choisir plusieurs",
+    text="Choisir prédicteur(s)",
     fill="#38B6FF",
     font=("Junge Regular", 18 * -1),
 )
@@ -401,7 +396,7 @@ canvas.create_text(
     80.0,
     158.0,
     anchor="nw",
-    text="Choisir 1 source",
+    text="Choisir une source",
     fill="#38B6FF",
     font=("Junge Regular", 18 * -1)
 )
@@ -419,7 +414,7 @@ canvas.create_text(
     480.0,
     158.0,
     anchor="nw",
-    text="Suivant",
+    text="Prédictions",
     fill="#38B6FF",
     font=("Junge Regular", 18 * -1)
 )
