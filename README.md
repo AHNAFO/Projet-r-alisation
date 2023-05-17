@@ -55,3 +55,13 @@ python3 ./interface.py
 ```
 
 # Ajout de source / Ajout de prédicteur
+
+Grâce à l'architecture orientée objet du projet, il est facilement possible d'ajouter des sources ou des prédicteurs de PRNG.
+
+Il suffit de créer de nouvelles classes dans un nouveau fichier ExempleOracle.py ou ExempleSource.py et de faire hériter ces classes de la classe Predictor ou Source.
+
+Ensuite il faut surcharger certaines méthodes pour que les classes soient fonctionnelles.
+
+Les classes à surcharger sont generateNumberSequence pour les sources et predictNextNumber pour les prédicteurs.
+
+Il faut ensuite ajouter la source et son prédicteur dans le tableau dictSourcesOracle dans le fichier process.py pour controller le fonctionnement.
